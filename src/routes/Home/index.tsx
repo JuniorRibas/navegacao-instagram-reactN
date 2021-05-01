@@ -7,9 +7,13 @@ const Stack = createStackNavigator();
 import Home from "../../Pages/Home/Principal";
 
 //Componentes
-import HeaderHomeRight from "../../Components/Routes/Home/HeaderRight";
-import HeaderHomeLeft from "../../Components/Routes/Home/HeaderLeft";
+import HeaderHomeRight from "./../../Components/Routes/Home/StackHome/HeaderRight";
+import HeaderHomeLeft from "./../../Components/Routes/Home/StackHome/HeaderLeft";
+import HeaderChatRight from "./../../Components/Routes/Home/StackChat/HeaderRight";
 import Fotos from "../../Pages/Home/Fotos";
+import Likes from "../../Pages/Home/Likes";
+import ListChat from "../../Pages/Home/ListChat";
+import NewChat from "./../../Pages/Home/NewChat";
 
 const Inicial = () => {
   return (
@@ -28,6 +32,17 @@ const Inicial = () => {
         }}
       />
       <Stack.Screen name="Home/Fotos" component={Fotos} />
+      <Stack.Screen name="Home/Likes" component={Likes} />
+      <Stack.Screen
+        name="Home/Chat"
+        component={ListChat}
+        options={{
+          headerRight: () => {
+            return <HeaderChatRight />;
+          },
+        }}
+      />
+      <Stack.Screen name="Home/NewChat" component={NewChat} />
     </Stack.Navigator>
   );
 };

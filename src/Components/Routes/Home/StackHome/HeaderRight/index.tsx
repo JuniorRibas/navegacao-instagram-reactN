@@ -19,10 +19,10 @@ const Header = () => {
       <TouchableOpacity onPress={() => navigation.navigate("Home/Fotos")}>
         <Entypo name="squared-plus" size={25} color="black" />
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Home/Likes")}>
         <Entypo name="heart" size={25} color="black" />
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Home/Chat")}>
         <Ionicons name="ios-chatbubbles" size={25} color="black" />
       </TouchableOpacity>
     </View>
